@@ -83,6 +83,9 @@ k8-get-deploy-status:
 k8-port-forward:
 	# Port forward 
 	kubectl port-forward pod/python-helloworld-6779477f66-rwgm6 --address 0.0.0.0 5000:5000
-	
+
+k8-gather-logs:
+	kubectl logs pod-name
+
 destroy-cluster:
 	eksctl delete cluster --region=us-east-1 --name=udacity-k8 --force
